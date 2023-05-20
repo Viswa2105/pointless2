@@ -1,0 +1,79 @@
+include<stdio.h>
+main()
+{
+int ch;
+int balance=100000;
+int saving,key=1976,confo_pin;
+printf("Enter your confidential pin: ");
+scanf("%d",&confo_pin);
+if(confo_pin==key)
+{
+printf("Your account is AUTHORIZED");
+printf("Select your choice (1 to 3)\n1.Deposit\n2.Withdrawl\n3.Inquire balance\n\n");
+scanf("%d",&ch);
+printf("\n");
+switch(ch){
+
+case1:
+printf("Please enter the amount of deposition\n");
+int credit;
+scanf("%d",&credit);
+saving=balance+credit;
+printf("Your credit has been sucessfuly affirmed");
+printf("Your current saving is %d\n",saving);
+break;
+
+case2:
+printf("Please enter the amount  of withdrawl");
+int withdrawl;
+scanf("%d",&withdrawl);
+if(balance>withdrawl){
+saving=balance-withdrawl;
+printf("Your current saving is %d\n",saving);
+printf("TRANSACTION SUCESSFUL");
+}
+else{
+printf("TRANSACTION FAILED");
+printf("You dont have enough savings for the transaction\n");
+}
+break;
+ 
+ // CODE OF EXCALIBER
+ 
+ case3:
+ printf("Your current balance is %d",balance);
+ break;
+ 
+ default:
+ printf("Invalid option\n please try again");
+ }
+ }
+ else{
+ printf("Your account is not authorized");
+ }
+ }
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
